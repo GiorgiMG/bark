@@ -1,0 +1,26 @@
+input[type=date]::-webkit-inner-spin-button,
+input[type=date]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type=time]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.container-relative {
+  position: relative;
+}

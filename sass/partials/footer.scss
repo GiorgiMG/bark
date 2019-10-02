@@ -1,0 +1,112 @@
+.footer {
+  padding: 10%;
+  background-color: $color-dark-blue;
+  position: relative;
+
+
+  .footer-heading {
+    font-family: NunitoSans, Lato, serif;
+    font-size: 35px;
+    font-weight: 800;
+    color: $color-white;
+  }
+
+  .footer-subtext, .footer-link {
+    line-height: 2em;
+    font-family: $font-stack-primary;
+    font-size: 15px;
+    color: #9b9b9b;
+  }
+
+  .footer-links-section {
+
+
+    .footer-links {
+
+      display: flex;
+      margin: 5% 0;
+
+      ul {
+        margin-right: 10%;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+
+        &:hover {
+          text-decoration: none;
+          color: $color-light-gold;
+        }
+      }
+    }
+  }
+
+  .footer-heading-mini {
+    display: inline;
+    font-family: $font-stack-primary;
+    font-size: 18px;
+    font-weight: 900;
+    letter-spacing: 2.6px;
+    color: #cccccc;
+  }
+
+  .footer-links {
+    margin-right: 20%;
+    line-height: 2.5em;
+    display: inline-block;
+  }
+
+  .subscribe-button {
+    padding: 0.7em 3em;
+  }
+
+  &::after {
+    content: "Copyright © 2019 Bark Restaurant - All Rights Reserved.";
+    padding: 2.5em;
+    background-color: #18233a;
+    font-family: $font-stack-primary;
+    text-align: center;
+    font-size: 15px;
+    line-height: 1.87;
+    color: #696969;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  .footer-icon {
+    position: absolute;
+    bottom: 15%;
+    right: 0;
+  }
+
+  .newsletter-form-control {
+    width: 80%;
+    height: 0;
+    position: relative;
+    margin-bottom: 3em;
+    padding: 20px 20px 20px 0;
+    text-align: left;
+    border: none;
+    border-bottom: 1px solid #7C7D72;
+    font-family: $font-stack-primary;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #A4A4A4;
+    background-color: $color-dark-blue;
+  }
+
+  @include media-breakpoint-down(sm) {
+    .newsletter-section {
+      display: none;
+    }
+
+    .footer-links-section {
+      padding-bottom: 4em;
+      margin: 5% auto;
+    }
+  }
+}

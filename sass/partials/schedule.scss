@@ -1,0 +1,153 @@
+.schedule {
+
+  .schedule-header {
+    position: relative;
+    margin: 5% auto;
+
+    &::before,
+    &::after {
+      content: "";
+      background-color: $color-light-gold;
+      color: $color-white;
+      position: absolute;
+      height: 1px;
+      transform: translateX(-50%);
+      left: 50%;
+    }
+
+    &::before {
+      width: 4em;
+      top: 190px;
+    }
+
+    &::after {
+      width: 7em;
+      top: 195px;
+    }
+
+    p, h2 {
+      font-family: $font-stack-primary;
+    }
+
+    h2 {
+      font-size: 44px;
+      font-weight: normal;
+      color: $color-light-gold;
+      margin-bottom: 5%;
+    }
+
+    p {
+      font-size: 48px;
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: 5.8px;
+      text-align: center;
+      color: $color-alt-black;
+    }
+  }
+
+  .schedule-context,
+  .schedule-hours {
+    margin-top: 9%;
+  }
+
+  .schedule-context {
+    font-family: $font-stack-primary;
+    line-height: 1.67;
+    color: $color-alt-black;
+    padding: 0 2em 2em 2em;
+
+    span {
+      font-weight: bold;
+      font-size: 19px;
+    }
+
+    p {
+      font-size: 14px;
+      line-height: 1.87;
+      margin: 1em auto;
+      opacity: 0.7;
+    }
+
+    &::before {
+      content: "";
+      width: 100px;
+      height: 3px;
+      background-color: red;
+      position: absolute;
+      top: -20px;
+    }
+  }
+
+  .schedule-hours {
+    font-family: $font-stack-primary;
+    color: $color-alt-black;
+    margin: 5% 0 5% 10%;
+
+    .menu-schedules {
+      font-size: 13px;
+      line-height: 1.87;
+      color: #9A9A9A;
+      font-weight: 600;
+      display: flex;
+
+      .schedule-item {
+        list-style-type: none;
+        width: 50%;
+
+        .menu-schedule-header {
+          font-size: 18px;
+          font-weight: 900;
+          letter-spacing: 2.6px;
+          color: #333333;
+          margin-top: 0.5em;
+        }
+      }
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+
+    .schedule-context {
+      margin: 20% auto 6% auto;
+    }
+
+    .schedule-hours {
+      margin-left: 0;
+
+      .menu-schedules {
+
+        padding-left: 1em;
+
+        .schedule-item {
+          margin: 0 2%;
+        }
+      }
+    }
+
+    .schedule-header {
+
+      margin-top: 15%;
+
+      &::before,
+      &::after {
+        display: none;
+      }
+
+      p {
+        margin-top: 2.3em;
+        font-size: 37px;
+      }
+    }
+  }
+
+  @include media-breakpoint-between(md, lg) {
+    .schedule-header {
+
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+  }
+}

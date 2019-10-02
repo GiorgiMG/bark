@@ -1,0 +1,149 @@
+.reservation {
+
+  margin-top: 7%;
+  height: 810px;
+  background-image: url('../images/cinematic-imagery-661946-unsplash.png');
+  display: flex;
+  padding: 4%;
+
+  .reservation-title {
+    font-size: 40px;
+  }
+
+  .reservation-menu {
+    font-family: $font-stack-primary;
+    padding: 4em 4em 4em 0;
+    width: 612px;
+    height: 500px;
+    background-color: $color-white;
+    position: relative;
+    margin-left: 14%;
+    margin-top: 6%;
+
+    .reservation-title {
+      color: $color-alt-black;
+    }
+
+    &-description {
+      height: 84px;
+      font-family: $font-stack-primary;
+      font-size: 15px;
+      line-height: 1.87;
+      color: #696969
+    }
+
+    .reservation-phone {
+      font-family: $font-stack-primary;
+      font-size: 20px;
+      font-weight: 900;
+      letter-spacing: 1px;
+      color: #2e4778;
+    }
+
+    .reservation-email {
+      font-size: 14px;
+      line-height: 2;
+      color: #333333;
+    }
+
+    &-description,
+    .reservation-title,
+    .reservation-email,
+    .reservation-phone {
+      padding-left: 50px;
+    }
+
+    .reservation-menu-icon {
+      position: relative;
+      height: 25%;
+      left: 0;
+      bottom: -8%;
+
+      img {
+        max-height: 100%;
+        max-width: 100%;
+      }
+    }
+  }
+
+  .reservation-cta {
+    margin-top: 1%;
+    padding: 4em;
+    width: 570px;
+    height: 675px;
+    background-color: $color-dark-blue;
+    position: relative;
+
+    .reservation-title {
+      font-size: 40px;
+      line-height: 1.4;
+      color: $color-light-gold;
+
+      &::before {
+        content: "";
+        height: 1px;
+        width: 13%;
+        background-color: $color-light-gold;
+        position: absolute;
+        top: 22%;
+        left: 44%;
+      }
+
+      &::after {
+        content: "";
+        height: 1px;
+        width: 19%;
+        background-color: $color-light-gold;
+        position: absolute;
+        top: 23%;
+        left: 41%;
+      }
+    }
+
+    .reservation-form {
+      margin-top: 25%;
+    }
+
+    .reservation-cta-icon {
+      position: absolute;
+      height: 35%;
+      width: 60%;
+      right: 10px;
+      bottom: 0;
+
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+
+    .reservation-cta {
+       margin: 10% auto 0 auto;
+       width: calc(100% - 5px);
+
+      .reservation-title::before,
+      .reservation-title::after {
+        display: none;
+      }
+
+      .reservation-title {
+        font-size: 22px;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(lg) {
+    .reservation-menu {
+      display: none;
+    }
+  }
+
+  @include media-breakpoint-between(sm, lg) {
+    .reservation-cta {
+      margin: 0 auto;
+    }
+  }
+}
